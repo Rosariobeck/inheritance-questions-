@@ -425,3 +425,331 @@ public class Main {
     }
 }
 
+question 15
+
+// Student class with attributes and method to determine grade
+class Student {
+    // Attributes of the student
+    private String name;
+    private int marks;
+    private char grade;
+
+    // Constructor to initialize the student's name and marks
+    public Student(String name, int marks) {
+        this.name = name;
+        this.marks = marks;
+        this.grade = ' '; // Default grade is empty, will be assigned later
+    }
+
+    // Method to determine the grade based on marks
+    public void determineGrade() {
+        if (marks >= 90 && marks <= 100) {
+            grade = 'A';
+        } else if (marks >= 75 && marks < 90) {
+            grade = 'B';
+        } else if (marks >= 50 && marks < 75) {
+            grade = 'C';
+        } else {
+            grade = 'F';
+        }
+    }
+
+    // Method to display the student's details (name, marks, and grade)
+    public void displayStudentDetails() {
+        System.out.println("Student Name: " + name);
+        System.out.println("Marks: " + marks);
+        System.out.println("Grade: " + grade);
+    }
+}
+
+// Main class to demonstrate the program
+public class StudentGrade {
+    public static void main(String[] args) {
+        // Creating Student objects with different marks
+        Student student1 = new Student("Alice", 92);
+        Student student2 = new Student("Bob", 85);
+        Student student3 = new Student("Charlie", 65);
+        Student student4 = new Student("David", 45);
+
+        // Determine grades for each student
+        student1.determineGrade();
+        student2.determineGrade();
+        student3.determineGrade();
+        student4.determineGrade();
+
+        // Display details of each student
+        student1.displayStudentDetails();
+        student2.displayStudentDetails();
+        student3.displayStudentDetails();
+        student4.displayStudentDetails();
+    }
+}
+ question 13
+ // Employee class with constructor, getters, and setters
+class Employee {
+    // Attributes of the class
+    private String name;
+    private int employeeID;
+    private double salary;
+
+    // Constructor to initialize employee's details
+    public Employee(String name, int employeeID, double salary) {
+        this.name = name;
+        this.employeeID = employeeID;
+        this.salary = salary;
+    }
+
+    // Getter method for name
+    public String getName() {
+        return name;
+    }
+
+    // Setter method for name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter method for employeeID
+    public int getEmployeeID() {
+        return employeeID;
+    }
+
+    // Setter method for employeeID
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    // Getter method for salary
+    public double getSalary() {
+        return salary;
+    }
+
+    // Setter method for salary
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    // Method to display employee's details
+    public void displayDetails() {
+        System.out.println("Employee Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Employee ID: " + employeeID);
+        System.out.println("Salary: " + salary);
+    }
+}
+
+// Main class to create and test Employee objects
+public class Main {
+    public static void main(String[] args) {
+        // Create an object of Employee class and pass details via the constructor
+        Employee employee1 = new Employee("John Doe", 12345, 55000.50);
+
+        // Display employee details
+        employee1.displayDetails();
+
+        // Modify employee details using setters
+        employee1.setName("Jane Smith");
+        employee1.setEmployeeID(67890);
+        employee1.setSalary(60000.75);
+
+        // Display updated employee details
+        System.out.println("\nUpdated Employee Details:");
+        employee1.displayDetails();
+    }
+}
+ question 13
+ // Employee class with constructor
+class Employee {
+    // Attributes of the class
+    private String name;
+    private int employeeID;
+    private double salary;
+
+    // Constructor to initialize employee's details
+    public Employee(String name, int employeeID, double salary) {
+        this.name = name;
+        this.employeeID = employeeID;
+        this.salary = salary;
+    }
+
+    // Getter method for name
+    public String getName() {
+        return name;
+    }
+
+    // Getter method for employeeID
+    public int getEmployeeID() {
+        return employeeID;
+    }
+
+    // Getter method for salary
+    public double getSalary() {
+        return salary;
+    }
+
+    // Method to display employee's details
+    public void displayDetails() {
+        System.out.println("Employee Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Employee ID: " + employeeID);
+        System.out.println("Salary: " + salary);
+    }
+}
+
+// Main class to create and test Employee objects
+public class Main {
+    public static void main(String[] args) {
+        // Create an object of Employee class and pass details via the constructor
+        Employee employee1 = new Employee("John Doe", 12345, 55000.50);
+
+        // Display employee details
+        employee1.displayDetails();
+    }
+}
+question 11
+// Appliance class
+class Appliance {
+    // Attributes of the class
+    String name;
+    int powerUsage;
+
+    // Constructor to initialize the appliance's name and power usage
+    public Appliance(String name, int powerUsage) {
+        this.name = name;
+        this.powerUsage = powerUsage;
+    }
+
+    // Method to check power efficiency
+    public String checkPowerEfficiency() {
+        if (powerUsage <= 100) {
+            return "Efficient";
+        } else {
+            return "Inefficient";
+        }
+    }
+
+    // Method to display appliance details and efficiency status
+    public void displayDetails() {
+        System.out.println("Appliance Name: " + name);
+        System.out.println("Power Usage: " + powerUsage + " watts");
+        System.out.println("Efficiency Status: " + checkPowerEfficiency());
+    }
+}
+
+// Main class to create and test Appliance objects
+public class Main {
+    public static void main(String[] args) {
+        // Create an object of Appliance class and pass details via the constructor
+        Appliance appliance1 = new Appliance("Air Conditioner", 150);
+
+        // Display appliance details and its efficiency status
+        appliance1.displayDetails();
+
+        // Create another object with efficient power usage
+        Appliance appliance2 = new Appliance("LED Bulb", 30);
+
+        // Display appliance details and its efficiency status
+        appliance2.displayDetails();
+    }
+}
+question 6
+// Library class
+class Library {
+    // Attributes of the class
+    String name;
+    String location;
+    int numberOfBooks;
+
+    // Constructor to initialize the library's name, location, and number of books
+    public Library(String name, String location) {
+        this.name = name;
+        this.location = location;
+        this.numberOfBooks = 0; // Initially, no books are added
+    }
+
+    // Method to add books to the library
+    public void addBook(int numBooks) {
+        this.numberOfBooks += numBooks;
+        System.out.println(numBooks + " book(s) added to the library.");
+    }
+
+    // Method to display library information
+    public void displayLibraryInfo() {
+        System.out.println("Library Name: " + name);
+        System.out.println("Location: " + location);
+        System.out.println("Number of Books: " + numberOfBooks);
+    }
+}
+
+// Main class to create and test Library objects
+public class Main {
+    public static void main(String[] args) {
+        // Create an object of Library class and initialize with name and location
+        Library library = new Library("City Central Library", "Downtown");
+
+        // Display library information before adding books
+        library.displayLibraryInfo();
+
+        // Add books to the library
+        library.addBook(50);  // Adding 50 books
+        library.addBook(30);  // Adding 30 more books
+
+        // Display library information after adding books
+        library.displayLibraryInfo();
+    }
+}
+
+ QUESTION FILE HANDLING 
+ import java.io.*;
+
+public class EmployeeFileReader {
+    
+    public static void main(String[] args) {
+        // File path where employee data is stored
+        String filePath = "employee_details.txt";
+        
+        // Read the employee details from the file
+        readEmployeeDetails(filePath);
+    }
+
+    // Method to read employee details from the file and display them
+    public static void readEmployeeDetails(String filePath) {
+        // Create a BufferedReader to read the file
+        BufferedReader reader = null;
+
+        try {
+            // Create a BufferedReader to read the file line by line
+            reader = new BufferedReader(new FileReader(filePath));
+
+            String line;
+            // Read the file line by line
+            while ((line = reader.readLine()) != null) {
+                // Split the line into name, employeeID, and salary
+                String[] employeeData = line.split(",");
+                
+                // Display the employee details
+                System.out.println("Name: " + employeeData[0]);
+                System.out.println("Employee ID: " + employeeData[1]);
+                System.out.println("Salary: " + employeeData[2]);
+                System.out.println("----------------------------");
+            }
+        } catch (FileNotFoundException e) {
+            // Handle case where file is not found
+            System.out.println("Error: The file could not be found.");
+        } catch (IOException e) {
+            // Handle any other I/O errors
+            System.out.println("Error: An I/O error occurred.");
+        } finally {
+            // Close the BufferedReader in the finally block to ensure it is closed
+            try {
+                if (reader != null) {
+                    reader.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Error: Failed to close the file.");
+            }
+        }
+    }
+}
+
+
